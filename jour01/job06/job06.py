@@ -16,16 +16,17 @@ class Rectangle:
         self.__largeur = largeur
     
 
-rectangle = Rectangle(10, 15)
+if __name__ == "__main__":
+    rectangle = Rectangle(10, 15)
 
-print(rectangle._Rectangle__longueur) # name mangling
-rectangle.modifier_longueur(20)
-print(rectangle.afficher_longueur())
+    print(rectangle._Rectangle__longueur) # name mangling
+    rectangle.modifier_longueur(20)
+    print(rectangle.afficher_longueur())
 
-print(rectangle._Rectangle__largeur) # name mangling
-rectangle.modifier_largeur(4)
-print(rectangle.afficher_largeur())
+    print(rectangle._Rectangle__largeur) # name mangling
+    rectangle.modifier_largeur(4)
+    print(rectangle.afficher_largeur())
 
-# not callable
-print(rectangle.__largeur)
-print(rectangle.__longueur)
+    # not callable
+    print(rectangle.__largeur)
+    print(rectangle.__longueur)

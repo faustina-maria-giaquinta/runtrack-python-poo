@@ -1,4 +1,11 @@
-class Rectangle:
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
+from jour01.job06.job06 import Rectangle as Rct
+
+class Rectangle(Rct):
     def __init__(self, largeur, longueur):
         self.__largeur = largeur
         self.__longueur = longueur
@@ -8,3 +15,15 @@ class Rectangle:
     
     def surface(self):
         return self.__largeur * self.__longueur
+
+
+if __name__ == "__main__":
+    rectangle = Rectangle(10, 15)
+
+    print(rectangle._Rectangle__longueur) # name mangling
+    rectangle.modifier_longueur(20)
+    print(rectangle.afficher_longueur())
+
+    print(rectangle._Rectangle__largeur) # name mangling
+    rectangle.modifier_largeur(4)
+    print(rectangle.afficher_largeur())
