@@ -8,6 +8,7 @@ class Rectangle(Forme):
         self.__hauteur = hauteur
     
     def aire(self):
+        super().aire()
         return self.__hauteur * self.__largeur
 
 
