@@ -23,7 +23,7 @@ class Eleve(Personne):
         print(f"J'ai {self.age} ans")
 
     
-class Professeur:
+class Professeur(Personne):
     def __init__(self, matiere):
         self.__matiere_enseignee = matiere
 
