@@ -28,7 +28,7 @@ class Parallelepipede(Rectangle):
         return f"La largeur du parallélépipède créé est {self.__largeur}"
 
     def afficher_hauteur(self):
-        return f"La hauteur du parallélépipède créé est {self.__largeur}"
+        return f"La hauteur du parallélépipède créé est {self.__hauteur}"
         
     def modifier_hauteur(self, hauteur):
         self.__largeur = largeur
