@@ -16,6 +16,25 @@ class Rectangle(Rct):
     def surface(self):
         return self.__largeur * self.__longueur
 
+class Parallelepipede(Rectangle):
+    def __init__(self, hauteur):
+        super().__init__()
+        self.__hauteur = hauteur
+
+    def afficher_longueur(self):
+        return f"La longueur du rectaparallélépipèdengle créé est {self.__longueur}"
+        
+    def afficher_largeur(self): 
+        return f"La largeur du parallélépipède créé est {self.__largeur}"
+
+    def afficher_hauteur(self):
+        return f"La hauteur du parallélépipède créé est {self.__largeur}"
+        
+    def modifier_hauteur(self, hauteur):
+        self.__largeur = largeur
+    
+    def volume(self):
+        return self.__largeur * self.__longueur * self.__hauteur
 
 if __name__ == "__main__":
     rectangle = Rectangle(10, 15)
