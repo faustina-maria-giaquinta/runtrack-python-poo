@@ -13,8 +13,8 @@ class Personne:
             self.age = age
 
 class Eleve(Personne):
-    def __init__(self, age):
-        super().age = age
+    def __init__(self):
+        super().__init__()
 
     def aller_en_cours(self):
         print("Je vais en cours.")
@@ -31,3 +31,10 @@ class Professeur:
         print("Le cours va commencer.")
 
 
+if __name__ == "__main__":
+    personne_1 = Personne()
+    eleve_1 = Eleve()
+    
+    personne_1.afficher_age()
+    eleve_1.affichage_age()
+# end main
